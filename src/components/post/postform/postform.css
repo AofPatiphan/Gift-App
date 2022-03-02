@@ -1,11 +1,16 @@
 .previewpostphoto {
-    width: 100%;
-    border-radius: 10px;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .deletePhotoPreview {
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 1.2rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.2rem;
+}
+
+.postBtnSubmit {
+  background: #f898a4;
+  color: white;
 }
