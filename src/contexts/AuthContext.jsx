@@ -27,7 +27,7 @@ function AuthContextProvider(props) {
     const [loginLoading, setLoginLoading] = useState(true);
 
     useEffect(() => {
-        const token = localStorage.getItem('token');
+        const token = localStorageService.getToken('token');
         if (token) {
             setUser(jwtDecode(token));
         }

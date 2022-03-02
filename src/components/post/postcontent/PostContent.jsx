@@ -196,9 +196,12 @@ function PostContent({ item, likePost, unLikePost, isLike }) {
                         <></>
                     ) : (
                         <div className="modalFooter">
-                            <button
-                                className="btn btn-footer "
-                                style={{ height: '50px', width: '60px' }}
+                            <div
+                                style={{
+                                    height: '40px',
+                                    width: '50px',
+                                    marginLeft: '10px',
+                                }}
                                 onClick={isLike ? unLikePost : likePost}
                             >
                                 <i
@@ -206,7 +209,7 @@ function PostContent({ item, likePost, unLikePost, isLike }) {
                                         isLike ? '-fill' : ''
                                     } heartIcon`}
                                 />
-                            </button>
+                            </div>
                             <div className="like-amount">
                                 {item.Likes.length}
                             </div>

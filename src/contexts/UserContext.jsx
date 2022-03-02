@@ -17,9 +17,13 @@ function UserContextProvider(props) {
     // Get data profile
     const token = localStorageService.getToken('token');
     const fetchUser = async (tokenInput) => {
-        const a = jwtDecode(token || tokenInput);
-        const res = await axios.get(`/user/${a.username}`);
-        setUserData(res.data.user);
+        try {
+            const a = jwtDecode(token || tokenInput);
+            const res = await axios.get(`/user/${a.username}`);
+            setUserData(res.data.user);
+        } catch (err) {
+            console.log(err);
+        }
     };
     useEffect(() => {
         if (token) {
