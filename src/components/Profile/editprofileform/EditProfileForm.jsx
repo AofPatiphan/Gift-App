@@ -16,6 +16,8 @@ function EditProfileForm({ person, setPerson, username }) {
         person.About.interest || ''
     );
 
+    console.log(editInterest.split(','));
+
     const handleChangeToggle = (value) => {
         const result = [];
         value.map((item) => result.push(item.value));
@@ -93,6 +95,7 @@ function EditProfileForm({ person, setPerson, username }) {
                             options={interestOption}
                             className="basic-multi-select mb-3 selecter"
                             classNamePrefix="select"
+                            // value={editInterest.split(',')}
                             onChange={handleChangeToggle}
                         />
 
