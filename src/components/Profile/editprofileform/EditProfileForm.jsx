@@ -16,8 +16,6 @@ function EditProfileForm({ person, setPerson, username }) {
         person.About.interest || ''
     );
 
-    console.log(editInterest.split(','));
-
     const handleChangeToggle = (value) => {
         const result = [];
         value.map((item) => result.push(item.value));
@@ -47,7 +45,7 @@ function EditProfileForm({ person, setPerson, username }) {
             aria-labelledby="EditProfileModalLabel"
             aria-hidden="true"
         >
-            <div className="modal-dialog modal-fullscreen">
+            <div className="modal-dialog ">
                 <form
                     className="modal-content editProfileForm model-edit"
                     onSubmit={handleSubmitUpdateProfile}
@@ -56,12 +54,6 @@ function EditProfileForm({ person, setPerson, username }) {
                         <h5 className="modal-title " id="EditProfileModalLabel">
                             Edit Profile
                         </h5>
-                        <button
-                            type="button"
-                            className="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                        ></button>
                     </div>
                     <div className="modal-body mb-3">
                         <div className="mb-3">
@@ -95,7 +87,6 @@ function EditProfileForm({ person, setPerson, username }) {
                             options={interestOption}
                             className="basic-multi-select mb-3 selecter"
                             classNamePrefix="select"
-                            // value={editInterest.split(',')}
                             onChange={handleChangeToggle}
                         />
 
@@ -115,13 +106,13 @@ function EditProfileForm({ person, setPerson, username }) {
                         </div>
                     </div>
                     <div className="modal-footer ">
-                        {/* <button
-              type="button"
-              className="btn closebutton"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button> */}
+                        <button
+                            type="button"
+                            className="btn closebutton"
+                            data-bs-dismiss="modal"
+                        >
+                            Close
+                        </button>
                         <button className="btn saveBtn" data-bs-dismiss="modal">
                             Save changes
                         </button>
