@@ -54,7 +54,7 @@ function PostContent({ item, likePost, unLikePost, isLike }) {
       aria-labelledby={`${item.id}ModalLabel`}
       aria-hidden="true"
     >
-      <div className="modal-dialog modal-dialog-centered">
+      <div className="modal-dialog modal-dialog-centered  ">
         <div className="modal-content">
           <div className="modal-header">
             <div className="left-menu">
@@ -63,6 +63,7 @@ function PostContent({ item, likePost, unLikePost, isLike }) {
                   <button
                     type="button"
                     className="btn btn-light"
+                    style={{ color: "#33a2e5" }}
                     onClick={() => setShowEdit(!showEdit)}
                   >
                     Edit
@@ -73,6 +74,7 @@ function PostContent({ item, likePost, unLikePost, isLike }) {
                     className="btn btn-light"
                     data-bs-dismiss="modal"
                     aria-label="Close"
+                    style={{ color: "#33a2e5" }}
                     data-bs-toggle="modal"
                     data-bs-target={`#DeletePostModal${item.id}`}
                   >
@@ -118,7 +120,7 @@ function PostContent({ item, likePost, unLikePost, isLike }) {
                   ) : (
                     <></>
                   )}
-                  <div className="mb-2">
+                  <div className="mb-2 ">
                     <label
                       htmlFor="caption"
                       className="col-form-label postTitle"
